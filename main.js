@@ -52,21 +52,21 @@ function addStar() {
   scene.add(star);
 }
 
-Array(200).fill().forEach(addStar);
+Array(5000).fill().forEach(addStar);
 
 // Background
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('/space.jpg');
 scene.background = spaceTexture;
 
 // Avatar
-const strikersTexture = new THREE.TextureLoader().load('Strikers.jpg');
+const strikersTexture = new THREE.TextureLoader().load('/Strikers.jpg');
 
 const strikers = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: strikersTexture }));
 
 scene.add(strikers);
 
 // Moon
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
+const moonTexture = new THREE.TextureLoader().load('/moon.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
