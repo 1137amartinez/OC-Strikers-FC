@@ -9,5 +9,5 @@ export default defineConfig({
     },
     outDir: 'dist',
   },
-  publicDir: 'public', // Ensure Vite knows about the public directory
+  publicDir: 'public',
 });
