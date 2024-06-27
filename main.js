@@ -52,22 +52,14 @@ function addStar() {
   scene.add(star);
 }
 
-Array(5000).fill().forEach(addStar);
+Array(200).fill().forEach(addStar);
 
 // Background
 const spaceTexture = new THREE.TextureLoader().load('/space.jpg');
 scene.background = spaceTexture;
 
-// Avatar
-const strikersTexture = new THREE.TextureLoader().load('/Strikers.jpg');
-
-const strikers = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: strikersTexture }));
-
-scene.add(strikers);
-
 // Moon
-const moonTexture = new THREE.TextureLoader().load('/moon.jpg');
-
+const moonTexture = new THREE.TextureLoader().load('/Moon.jpg');
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial({
@@ -80,18 +72,12 @@ scene.add(moon);
 moon.position.z = 30;
 moon.position.setX(-10);
 
-strikers.position.z = -5;
-strikers.position.x = 2;
-
 // Scroll Animation
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
   moon.rotation.x += 0.05;
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
-
-  strikers.rotation.y += 0.01;
-  strikers.rotation.z += 0.01;
 
   camera.position.z = 30 + t * -0.01;
   camera.position.x = -3 + t * -0.0002;
