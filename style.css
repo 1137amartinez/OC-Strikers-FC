@@ -1,12 +1,16 @@
 /* Import Google Fonts or any other font styles if needed */
 @import url("https://use.typekit.net/jmk3xov.css");
 
+
+
+
 /* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 
 /* Body styles */
 body {
@@ -15,6 +19,7 @@ body {
   color: white;
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
+
 
 /* Canvas styles */
 canvas {
@@ -25,11 +30,13 @@ canvas {
   height: 100%;
 }
 
+
 /* Root variables */
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
   --spacing: 350px;
 }
+
 
 /* Main container styles */
 main {
@@ -44,6 +51,7 @@ main {
   grid-template-columns: repeat(12, 1fr);
 }
 
+
 /* Header styles */
 header {
   background: var(--dark-bg);
@@ -52,6 +60,7 @@ header {
   padding: 2rem;
   margin-bottom: var(--spacing);
 }
+
 
 /* Section styles */
 section {
@@ -63,6 +72,7 @@ section {
   margin-bottom: var(--spacing);
 }
 
+
 /* Blockquote styles */
 blockquote {
   margin: 0;
@@ -70,6 +80,7 @@ blockquote {
   grid-column: 2 / span 9;
   margin-bottom: var(--spacing);
 }
+
 
 blockquote p {
   color: black;
@@ -79,13 +90,17 @@ blockquote p {
   line-height: 1;
 }
 
+
 /* Left-aligned section styles */
 .left {
   grid-column: 6 / 12;
 }
+
 
 /* Images styles */
 .img-fluid {
   max-width: 100%;
   height: auto;
 }
+
+
